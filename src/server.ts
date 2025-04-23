@@ -43,7 +43,7 @@ app.get("/auth", async (req: Request, res: Response) => {
         tokenExpiry: tokens.accessExpires
       };
       const dbUser = await findUser({ userId: user.id });
-      const referrer = ref ? await findUser({ tgUserId: BigInt(ref as string) }) : null;
+      // const referrer = ref ? await findUser({ tgUserId: BigInt(ref as string) }) : null;
       dbUser ? await updateUser(dbUser.id, payload) : await createUser(payload);
       // if (!dbUser && referrer) await addReferrer(tokens.access, referrer.userId);
       const { text, ...args } = dbUser || ref ? await StartResponse() : await LoginResponse(userId as string);
