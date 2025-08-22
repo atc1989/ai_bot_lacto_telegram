@@ -11,7 +11,8 @@ export default async function () {
       // [Markup.button.callback("🏅 My Profile (View rank and points)", "USER_PROFILE")],
       // [Markup.button.callback("👥 Generate My Referral Link", "REFERRAL_LINK")],
       [Markup.button.callback("💬 Ask Col. Lacto", "ASK_QUERY"), Markup.button.callback("❓ FAQ", "FAQS")],
-      [Markup.button.callback("🛡️ Join Gut Guardians", "JOIN_CHANNEL")]
+      [Markup.button.callback("🛡️ Join Gut Guardians", "JOIN_CHANNEL")],
+      [Markup.button.url("← Back to GG Bot", "https://t.me/GrindersGuildBot")]
     ])
   };
 }
